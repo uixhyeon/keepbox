@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .overlay {
+        position: fixed;
+        top: 10%;
+        left: 10%;
+        /* width: 100%;
+    height: 100%; */
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        z-index: 99999;
+        display: none;
+      }
+      .popup {
+        background-color: #fff;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        width: 250px;
+        text-align: center;
+      }
+      .overlay.open {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="openBtn">공지사항 보기</button>
+    <div class="overlay" id="overlay">
+      <div class="popup">
+        <p>📢 새로운 이벤트가 시작되었습니다!</p>
+        <button id="closeBtn">닫기</button>
+      </div>
+    </div>
+    <script>
+      const oBtn = this.document.querySelector("#openBtn");
+      const oLay = this.document.querySelector("#overlay");
+oBtn.addEventListener("click", function(){
+oLay.classList.add("open")
+})
+const cBtn = this.document.querySelector("#closeBtn")
+oLay.addEventListener("click", function(){
+oLay.classList.remove("open")
+})
+     
+    </script>
+  </body>
+</html>

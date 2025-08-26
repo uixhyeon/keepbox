@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+/* 모바일 메뉴 토글 */
+.menu {
+  display: none;
+}
+.menu.open {
+  display: block;
+}
+/* open에 해당하는 css가 있어야 한다 */
+
+/* 클릭메뉴 */
+.click-nav {
+  padding: 50px 0;
+  background-color: antiquewhite;
+}
+.click-menu {
+  display: none;
+}
+.click-menu.toggleOpen {
+  display: flex;
+}

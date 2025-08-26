@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* 상단 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  /* background-color: #e67979; */
+  background-color: #fff;
+}
+.header-bg {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.5s;
+}
+.header-inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1800px;
+  height: 80px;
+  margin: auto;
+  /* background-color: aqua; */
+}
+/* 로고 */
+.logo {
+  width: 220px;
+}
+.logo img {
+  width: 100%;
+}
+/* 메뉴 */
+.nav {
+  /* background-color: rgb(210, 171, 246); */
+}
+.gnb {
+  width: calc(178px * 6);
+  display: flex;
+  height: 80px;
+  /* background-color: rgb(194, 194, 235); */
+}
+.gnb > li {
+  width: calc(100% / 6);
+  height: 80px;
+}
+.gnb > li > a {
+  display: block;
+  width: 100%;
+  line-height: 80px;
+  font-size: 19px;
+  font-weight: bold;
+}
+.gnb > li:hover > a {
+color: red;
+}
+
+.depth2 {
+  visibility: hidden;
+  opacity: 0;
+  padding: 50px 0;
+  transition: all 0.5s;
+}
+.depth2 > li > a {
+  line-height: 30px;
+  color: #fff;
+}
+.depth2 > li > a:hover{
+color: red;
+}
+.gnb:hover .depth2{
+  opacity: 1;
+  visibility: visible;
+}
+/* 언어 */
+.lang {
+  width: 177px;
+  display: flex;
+  gap: 10px;
+}
+.lang > a {
+  width: 68px;
+}
+.lang > a > img {
+  width: 100%;
+}
+.lang-list {
+  display: flex;
+  width: calc(100% - 68px);
+  padding-top: 5px;
+  /* background-color: #79e4e6; */
+}
+.lang-list li {
+  position: relative;
+  text-align: center;
+  width: calc(100% / 2);
+}
+.lang-list li::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 1px;
+  height: 11px;
+  background-color: #999;
+}
+.lang-list li:first-child::after {
+  content: none;
+}
+.lang-list li a {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  color: #888;
+}
+.lang-list li:nth-child(2) a {
+  color: #333;
+}

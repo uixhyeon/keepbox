@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">안녕하세요😄</h1>
+    <button id="btn">글자바꾸기 버튼</button>
+    <button id="btn2">버튼2</button>
+    <p>---</p>
+    <h1 id="title1">가나다라</h1>
+    <button id="btn1">Next</button>
+
+    <script>
+      const title = document.querySelector("#title");
+      const btn = document.querySelector("#btn");
+      //  이렇게 하면 재사용이 불가능
+      //   btn.addEventListener("click", function () {
+      //     title.innerText = "반갑습니다";
+      // });
+      const btn2 = document.querySelector("#btn2")
+      // innerText 안의 텍스트를 뜻
+      function changeText() {
+        // 기능을 안에 넣음
+        title.innerText = "반갑습니다";
+      }
+    //   btn.addEventListener("click", function () {
+    //     changeText();
+    //   });
+      btn.addEventListener("click", changeText)
+      btn2.addEventListener("click", changeText)
+
+
+const title1 = document.querySelector("#title1")
+const btn1 = document.querySelector("#btn1")
+
+function changeWord(){
+    title1.innerText = "마바사"
+}
+btn1.addEventListener("mouseenter",changeWord)
+    </script>
+  </body>
+</html>

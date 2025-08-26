@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alert('click')">클릭</button>
+    <!-- <button onclick="greeting('정현영')">반가워 클릭</button> -->
+    <!-- <button onclick="greeting('그린')">그린 클릭</button> -->
+    <button id="nameClick">이름 클릭</button>
+    <button id="greenClick">그린 클릭</button>
+    <!-- 
+    greeting()는 내가 만든 함수 
+    그래서 스크립트에 정의를 해야한다 
+    
+    -->
+
+    <script>
+      // function(){}
+      //화살표 함수
+      // ()=>{
+      // 실행할 내용
+      // }
+
+      // 위에했던것을 돔을 이용해서 컨트롤한다
+      const nameClick = document.querySelector("#nameClick");
+      const greenClick = document.querySelector("#greenClick");
+      nameClick.addEventListener("click", function () {
+        greeting("정현영");
+      });
+      greenClick.addEventListener("click", () => {
+        greeting("green");
+      });
+      // 1. 아래의 것을 복사해서 붙여넣는다.
+      // 2. ... 함수명을 집어넣는다
+      function greeting(name) {
+        // alert("반가워 00야")
+        // 확인완
+        console.log(name);
+      }
+      // 매개변수 바디에 (정현영) 이게 인수
+      // 스크립트() 안에 있는것은 매개변수
+      // 매개변수가 인수를 가져온다.. 이게 재사용 하는거이다
+      // function add(){}
+      // add()  <=이게 형식이다. 잘 기억하기
+      function add(a, b, c) {
+        // console.log(a);
+        // 그냥하면 인식을 못해서 결과값을 적어주라고 RETURN을 적음 ..아마 이전버전
+        //  return console.log(a);
+        // a + b;
+
+        // console.log(b);
+        // console.log(a + b);
+        return a + b + c;
+      }
+      add(1, 2);
+      const result = add(1, 2, 3);
+      console.log(result);
+      //   데이터 값과 매개변수들의 갯수는 일치해야한다
+      const sum = (num1, num2) => {
+        console.log(num1);
+        console.log(num2);
+      };
+      sum(10, 20);
+      // 매개변수가 1개이면 괄호생략 가능
+      const sum2 = (num1) => {
+        console.log(num1);
+      };
+      sum2(10);
+
+      //
+      const sum1 = (num1, num2) => num1 + num2;
+      const result1 = sum1(10, 20);
+      console.log(result1);
+    //   undefine 가 뜨면 return 이 빠진지 확인해주기
+    </script>
+  </body>
+</html>

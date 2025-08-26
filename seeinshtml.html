@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btnHello">인사하기</button>
+    <button id="btnBye">작별인사</button>
+
+    <script>
+      function sayhello() {
+        console.log("안녕하세요.");
+      }
+      sayhello();
+      sayhello();
+      sayhello();
+      // 함수 재사용 하기
+      const btnHello = document.querySelector("#btnHello");
+      btnHello.addEventListener("click", function () {
+        sayhello();
+        sayhello();
+      });
+
+      function sayBye() {
+        console.log("안녕히 가세요");
+      }
+    //   sayBye();
+
+      const btnBye = document.querySelector("#btnBye");
+      btnBye.addEventListener("click", function () {
+        sayBye();
+        sayBye();
+        sayBye();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* cs */
+.cs {
+  position: relative;
+  display: block;
+  padding: 60px 0;
+
+  background-color: #f8f8f8;
+}
+.cs-inner {
+  position: relative;
+  display: flex;
+  gap: 2px;
+}
+.cs-link {
+  position: relative;
+  display: block;
+  width: 50%;
+  padding: 40px 60px;
+  background-color: #fff;
+}
+.cs-link:first-child {
+  background: url("../images/bg_faq.png") no-repeat #fff;
+  background-position: calc(100% - 40px);
+}
+.cs-link:last-child {
+  background: url("../images/bg_custom.png") no-repeat #fff;
+  background-position: calc(100% - 40px);
+}
+.cs-link h3 {
+  position: relative;
+  display: block;
+  color: #333;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.cs-link p {
+  line-height: 1.4;
+}

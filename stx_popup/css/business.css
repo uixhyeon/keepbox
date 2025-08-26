@@ -1,0 +1,108 @@
+@charset "utf-8";
+.business {
+  position: relative;
+  padding: 100px 0;
+  text-align: center;
+}
+.business-top {
+  margin-bottom: 70px;
+}
+.business-title {
+  position: relative;
+  padding-bottom: 22px;
+  color: #111;
+  font-family: "NotoSansBold";
+  font-size: 44px;
+  padding-top: 100px;
+  text-align: center;
+}
+.business-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 37px;
+  height: 4px;
+
+  background-color: #ff0000;
+}
+.business-desc {
+  margin-top: 30px;
+}
+.business-list {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 420px;
+  background-color: aqua;
+}
+.business-list > li {
+  width: calc(100% / 5);
+  background: url("../images/img_business.png") no-repeat;
+  background-position: 0px 0px;
+}
+.business-list > li:nth-child(1) {
+  background-position: calc(240px * 0) 0px;
+}
+.business-list > li:nth-child(2) {
+  /* background-position: -240px 0px; */
+  background-position: calc(240px * -1) 0px;
+}
+.business-list > li:nth-child(3) {
+  /* background-position: -240px 0px; */
+  background-position: calc(240px * -2) 0px;
+}
+.business-list > li:nth-child(4) {
+  /* background-position: -240px 0px; */
+  background-position: calc(240px * -3) 0px;
+}
+.business-list > li:nth-child(5) {
+  /* background-position: -240px 0px; */
+  background-position: calc(240px * -4) 0px;
+}
+.business-list > li > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 128, 37, 0);
+  font-size: 24px;
+  padding: 100px 0;
+  color: #fff;
+  transition: all 0.5s;
+}
+.business-list > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 112px;
+  background: url("../images/bg_common.png") no-repeat;
+  background-position: 0px 0px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.business-list > li > a:hover::after {
+  opacity: 1;
+}
+.business-list > li:nth-child(1) > a::after {
+  background-position: -169px 0px;
+}
+.business-list > li:nth-child(2) > a::after {
+  background-position: -298px 0px;
+}
+.business-list > li:nth-child(3) > a::after {
+  background-position: 0px -117px;
+}
+.business-list > li:nth-child(4) > a::after {
+  background-position: -139px -122px;
+}
+.business-list > li:nth-child(5) > a::after {
+  background-position: -274px -115px;
+}
+.business-list > li > a:hover {
+  background-color: rgba(244, 128, 37, 1);
+}

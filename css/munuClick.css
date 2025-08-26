@@ -1,0 +1,75 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+header {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  background-color: beige;
+}
+/* 메뉴의 bg는 따로 해주어야 한다. */
+.header_bg {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  /* 효과주기 높이값으로 */
+  transition: all 0.3s;
+  width: 100%;
+  /* height: 150px; */
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.header_bg.open {
+  height: 100px;
+}
+
+.menu {
+  display: flex;
+  width: 50%;
+  height: 50px;
+  max-width: 600px;
+  background-color: rgb(197, 219, 219);
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+/* 서브메뉴를 건들지 않기 
+호버했을때는 손을대어도
+여기서 위치조정할때는 필요하지 않다
+논블락안돼서 이건 아무 효과 ㄴㄴ
+효과를 주려면
+트렌지션 오파시티로 한다던다...
+*/
+
+.menu > li {
+  width: calc(100% / 3);
+  line-height: 50px;
+}
+
+.submenu {
+  height: 0px;
+  /* 같은걸로 하겟다
+    opacity: 0;
+    visibility: hidden; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+/* .munu:hover{이렇게 가능~} */
+.submenu.active {
+  height: 100px;
+  /* opacity: 1;
+visibility: visible; */
+}

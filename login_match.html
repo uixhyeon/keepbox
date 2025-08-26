@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+  </head>
+  <body>
+    <h1>로그인</h1>
+    <form>
+      <label for="username">username:</label>
+      <input type="text" id="username" name="username" />
+      <br />
+      <label for="password">password:</label>
+      <input type="text" id="password" name="password" />
+      <br />
+      <button type="button" id="loginBtn">LOGIN</button>
+    </form>
+    <p class="message">
+      <!-- JS출력 -->
+    </p>
+    <script>
+      // 저장된 사용자 아이디랑 비밀번호를 더미데이터 라는 곳에 저장한다
+      // (백이 없어서 가짜로 데이터 저장할거다)임의로 데이터 만들기
+      const storeUser = {
+        name: "haglass",
+        password: "1234",
+      };
+      //버튼저장
+      const loginBtn = document.querySelector("#loginBtn");
+      //유효성 검사한 메시지 출력 내용
+      const message = document.querySelector(".message");
+      loginBtn.addEventListener("click", function () {
+        // alert("click") < 확인용! 잘되는지
+        //사용자가 입력하는 정보 저장
+        const userName = document.querySelector("#username").value;
+        // .valu를 찍어줘야 값이 담긴다 &&id 명 같게
+        // console.log(userName);확인용
+        const userPassword = document.querySelector("#password").value;
+        // console.log(userPassword); 확인용
+        if (
+          userName !== storeUser.name &&
+          userPassword !== storeUser.password
+        ) {
+          message.textContent = "이름과 비밀번호가 일치하지 않습니다.";
+        } else if (userName !== storeUser.name) {
+          message.textContent = "아이디가 맞지 않습니다.";
+        } else if (userPassword !== storeUser.password) {
+          message.textContent = "비밀번호가 맞지 않습니다.";
+        } else {
+          message.textContent = "로그인 성공.";
+        }
+        // 클래스로 설정했는지 id로 설정했는지 잘 구분하기
+      });
+    </script>
+  </body>
+</html>
