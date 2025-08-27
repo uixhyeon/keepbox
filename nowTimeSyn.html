@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p>현재시각 : <span class="display">
+<!-- js 출력 -->
+
+</span></p>
+<body>
+        <script>
+function displayNow(){
+const now = new Date()
+// console.log(now)
+const currentTime= now.toLocaleTimeString()
+console.log(currentTime)
+const display = document.querySelector(".display")
+display.innerHTML = `${currentTime}`
+}
+// displayNow()
+// 계속 작동되는거 하고싶으면
+//셋인터벌 일정간격으로
+setInterval(displayNow, 1000)
+// 1000이면 1초
+        </script>
+</body>
+</html>
