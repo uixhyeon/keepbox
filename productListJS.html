@@ -25,27 +25,27 @@
                     { name: "스마트폰", date: new Date(2025, 1, 16) },
                   ];
                   const productList = document.querySelector(".project-list")
-      //
-      //        products.forEach(function(product){
-      //       productList.innerHTML += `
-      //    <div class="product">
-        //     <h3>${product.name}</h3>
-        //    <p>등록일 : ${product.date.toLocaleDateString()}</p>
-        //      </div>
-      //       `
-      //               //포이치끝
-      //             })
-      //여기는 포이치로
-      //배열의 량이 많으면 냅 돌리는게 안전하다
-      productList.innerHTML = products
-      .map(function(product){
-      return `
+      
+             products.forEach(function(product){
+            productList.innerHTML += `
          <div class="product">
             <h3>${product.name}</h3>
            <p>등록일 : ${product.date.toLocaleDateString()}</p>
              </div>
-      `;
-      }).join("")
+            `
+                    //포이치끝
+                  })
+    //  // //여기는 포이치로
+    // // //배열의 량이 많으면 냅 돌리는게 안전하다
+    //   productList.innerHTML = products
+    //   .map(function(product){
+    //   return `
+    //      <div class="product">
+    //         <h3>${product.name}</h3>
+    //        <p>등록일 : ${product.date.toLocaleDateString()}</p>
+    //          </div>
+    //   `;
+    //   }).join("")
     </script>
   </body>
 </html>

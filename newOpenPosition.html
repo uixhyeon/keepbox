@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="popup()">팝업</button>
+    <script>
+      function popup() {
+        // 탐색기에 있는것 중 연결해야한다
+        // 폴더를 나가서 찾으려면 /을 하고 찾거나 ../을 한다
+        // 이름을 넣어야 새 창에 뜬다
+        window.open(
+          "https://www.naver.com/",
+          "네이버",
+          "width = 200 , height = 100 , top = 200 , left = 200"
+        );
+      }
+    </script>
+  </body>
+</html>
