@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.full-img {
+  width: 640px;
+  margin: auto;
+  position: relative;
+  display: block;
+  height: 480px;
+  background-color: bisque;
+}
+.thumb-bar {
+    width: 640px;
+  display: flex;
+  margin: auto;
+}
+.thumb-bar img{
+    width: calc(100% / 5);
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+    /* background-color: blanchedalmond; */
+}
