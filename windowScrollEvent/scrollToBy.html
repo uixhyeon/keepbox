@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 5000px;
+        width: 4000px;
+      }
+      .byBtn {
+        position: absolute;
+        top: 1500px;
+        left: 1500px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="sTo()" class="toBtn">scrollTo(1000,2000)</button>
+    <button onclick="sBy()" class="byBtn">scrollBy(100,200)</button>
+
+    <script>
+      function sTo() {
+        window.scrollTo();
+        left:100,
+        top: 200,
+        behavior: "smooth"
+      }
+      function sBy(){
+        window.scrollBy(100, 200)
+      }
+    </script>
+  </body>
+</html>
