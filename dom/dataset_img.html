@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 버튼에 dataset으로 이미지 경로 저장 -->
+    <div class="thumbs">
+        <button data-img="images/cat01.png">고양이1</button>
+        <button data-img="images/cat02.png">고양이2</button>
+        <button data-img="images/cat03.png">고양이3</button>
+    </div>
+    <!-- 보여질 큰이비지 -->
+    <img src="images/cat01.png" alt="고양이1" id="mainImg">
+    <script>
+        const buttons = document.querySelectorAll("button")
+        const mainImg =document.querySelector("#mainImg")
+        buttons.forEach((btn)=>{
+// console.log(btn)
+btn.addEventListener("click" , () =>{
+// 경로가 바껴야 하기에 //버튼에 저장된 data-img 속성값을 가져오기
+const newImg = btn.dataset.img
+console.log(newImg) // 이렇게 하면 경로만 나오는게 보인다.
+mainImg.src = newImg
+})
+        })
+    </script>
+</body>
+</html>

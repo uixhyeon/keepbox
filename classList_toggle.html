@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+.red-color{
+    color: red;
+}
+
+ </style>
+</head>
+<body>
+    <div id="text">text</div>
+    <script>
+        const pEl = document.querySelector("#text")
+        // pEl.addEventListener("click", function(){
+        //     // console.log(this)
+        //     this.classList.toggle("red-color")
+        // })
+        // //
+        //1초마다 토글이 매서드로 반복
+// setInterval(function(){} , 1000) //이게 하나의 문법
+setInterval(function(){
+    pEl.classList.toggle("red-color")
+} , 1000)
+
+</script>
+</body>
+</html>
