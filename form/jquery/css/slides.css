@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+h2{
+    text-align: center;
+}
+.slide-wrap{
+    width: 600px;
+    margin: 100px auto;
+overflow: hidden;
+}
+/* 좌우 슬라이드 */
+/* 슬라이드를 위해 플랙스로 가로정렬 */
+.slide-list{
+    display: flex;
+}
+.slide-list li{
+    /* flex-grow: 0;여분동간을 늘리지 않음 */
+    /* flex-shrink: 0; 공간이 부족해도 줄어들지 않음 */
+    /* flex-basis: 600px; li의 아이템의 기본 크기 */
+    flex: 0 0 600px;
+}
+/* 위로 가기 슬라이드 */
+
+.slide-up-box {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+}
+.slide-list-up {
+}
+.slide-list-up li {
+  height: 400px;
+}

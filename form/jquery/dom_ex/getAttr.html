@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+.link{
+
+}
+
+  </style>
+  <body>
+    <a href="https://www.naver.com/">naver</a>
+    <script>
+      const aEl = document.querySelector("a");
+      //href 변수에 저장
+      const href = aEl.getAttribute("href");
+    //   aEl.setAttribute("href", "https://www.google.com/");
+      console.log(aEl);
+      aEl.innerText = "구글"
+    //   aEl.setAttribute("target" , "_blank")
+    //   aEl.setAttribute("title" , "구글로 이동")
+    //   aEl.setAttribute("id", "el")
+    //   aEl.setAttribute("class", "link")
+Object.assign(aEl,{
+href: "https://www.google.com/",
+target : "_blank",
+title :"구글로 이동",
+className :" link",
+id :"link"
+})
+</script>
+  </body>
+</html>

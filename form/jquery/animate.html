@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery animate</title>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/animate.js"></script>
+    <style>
+        .box{
+            position: relative;
+            /* 애니메이트가 적용이안된다면 기준점을 못잡아서임
+            그래서 포지션을 준다 */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">move</div>
+    <button class="move">이동</button>
+    <button class="resize">크기변경</button>
+    <button class="fade">보였다 사라짐</button>
+    <button class="all">모두 애니메이션</button>
+</body>
+</html>
