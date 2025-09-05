@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="myForm" name="myForm">
+      <label>
+        이름 :
+        <input type="text" id="username" name="username" />
+      </label>
+      <br />
+      <label>
+        이메일 :
+        <input type="text" id="email" name="email" />
+        <!-- <input type="email" id="email" name="email" /> -->
+        <!-- email이면 form 자체 유효성검사가 먼저 된다 -->
+      </label>
+      <br />
+      <button type="submit">제출</button>
+    </form>
+    <div id="result">
+      <!-- js 출력 -->
+    </div>
+    <div id="localStorage_result">
+      <!-- js출력 -->
+    </div>
+
+    <script>
+      const form = document.querySelector("#myForm");
+      const result = document.querySelector("#result");
+      const localRuselt = document.querySelector("#localStorage_result");
+      // // 페이지가 로드될때 로컬 스토리지에 저장된 값이 있으면 화면에 바로 출력
+      const savedName = localStorage.getItem("username");
+      const savedEmail = localStorage.getItem("useremail");
+      // 함수안의 변수는 밖으로 못 불러 오는데
+      //  함수 안에서의 변수는 밖에서 인식을 못하기에
+      //  한번더 불러도 괜찮다
+if(savedName && savedEmail){
+    localRuselt.innerHTML= `
+          <p>저장된 이름 : ${savedName}</p>
+         <p> 저장된 이메일 : ${savedEmail}</p>
+    `
+}
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // console.log("제출");
+        //  // id로 접근 하는 방법
+        // const userName = document.querySelector("#username").value
+        // const userEmail = document.querySelector("#email").value
+        // console.log(userEmail , userName);
+        // //form 네임으로 접근 하는 방법
+        const userName = myForm.username.value.trim();
+        const userEmail = myForm.email.value.trim();
+        // // trim은 글자 앞 빈 공간을 없애줌
+        console.log(userEmail, userName);
+
+        // 이름이랑 메일 주소를 화면에 출력하기
+        result.innerHTML = `
+             <p>이름 : ${userName}</p>
+         <p>이메일 : ${userEmail}</p>
+        `;
+        form.reset();
+        // // 입력값이 비었는지 확인하는 방법(유효성 검사 : 있는지 없는지 확인)
+        // // -인지 아닌지는 if else 이당
+        if (userName === "" || userEmail === "") {
+          alert("모든 항목을 입력하세요!");
+        }
+        //  // 이메일 형식 검사 (유효성 검사)
+        if (!userEmail.includes("@")) {
+          alert("올바른 이메일을 입력하세요.");
+        }
+        // // localStorage 저장 f12 어플리케이션 스토리지 로컬스토리지
+        localStorage.setItem("username", userName);
+        localStorage.setItem("useremail", userEmail);
+
+        // // local에 저장된 값 꺼내오기
+        const savedName = localStorage.getItem("username");
+        // console.log("저장된 이름:", savedName);
+        const savedEmail = localStorage.getItem("useremail");
+        // console.log("저장된 이메일:", savedEmail);
+      });
+    </script>
+  </body>
+</html>
